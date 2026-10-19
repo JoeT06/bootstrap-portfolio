@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joe Torres · IT Operations Portfolio</title>
+  <meta name="description" content="Joe Torres, Jr. Systems Administrator in Dallas-Fort Worth. Projects in endpoint management, Microsoft 365, networking, and automation.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 (local copy) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Site theme on top of Bootstrap -->
+  <link href="css/site.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand mono" href="#top"><span class="text-accent">joe@torres</span>:~$</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+              aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto mono small">
+          <li class="nav-item"><a class="nav-link" href="#projects">./projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ownership">./ownership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">./tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#background">./background</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">./contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <p class="mono text-accent mb-2">joe@torres:~$ whoami</p>
+            <h1 class="display-4 fw-bold mono mb-2">Joe Torres</h1>
+            <p class="lead mono text-secondary mb-4">Jr. Systems Administrator // Dallas-Fort Worth</p>
+            <p class="fs-5 mb-4">
+              I run endpoints, identity, networking, and automation for a food manufacturing plant on a small IT team.
+              Most of the work here started as a problem on the production floor or at the front desk.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#projects" class="btn btn-accent mono">./projects</a>
+              <a href="https://github.com/JoeT06/it-ops-portfolio" class="btn btn-outline-light mono" target="_blank" rel="noopener">source + scripts</a>
+              <a href="https://www.linkedin.com/in/joeatorres/" class="btn btn-outline-light mono" target="_blank" rel="noopener">linkedin</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <figure class="figure w-100 mb-0">
+              <img src="img/network-diagram.png" class="figure-img img-fluid rounded-3 shadow-lg"
+                   alt="Generalized network diagram: two ISPs into a dual-WAN firewall, a core switch, and an access layer of 5 switches and 14 access points, a Hyper-V host, and 6 floor display TVs" width="1200" height="800">
+              <figcaption class="figure-caption mono small">network.map: the environment I support, generalized</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row row-cols-2 row-cols-md-4 g-3 mt-5">
+          <div class="col">
+            <div class="card stat h-100"><div class="card-body">
+              <div class="stat-num mono">35+</div><div class="text-secondary small">apps and admin centers managed</div>
+            </div></div>
+          </div>
+          <div class="col">
+            <div class="card stat h-100"><div class="card-body">
+              <div class="stat-num mono">2</div><div class="text-secondary small">Microsoft 365 tenants</div>
+            </div></div>
+          </div>
+          <div class="col">
+            <div class="card stat h-100"><div class="card-body">
+              <div class="stat-num mono">19</div><div class="text-secondary small">switches and access points</div>
+            </div></div>
+          </div>
+          <div class="col">
+            <div class="card stat h-100"><div class="card-body">
+              <div class="stat-num mono">6</div><div class="text-secondary small">documented projects</div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="mono text-accent mb-1">joe@torres:~$ ls projects/</p>
+        <h2 class="mono fw-bold mb-2">Projects</h2>
+        <p class="text-secondary mb-4">Company names, people, hostnames, and internal configuration are generalized.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-warning mono">Rolling out</span>
+                  <span class="badge border text-secondary mono">owner</span>
+                </div>
+                <h3 class="h5 card-title">Production dashboard kiosks</h3>
+                <p class="card-text">Six TVs on the production floor show OEE dashboards from Intel NUCs. Without automation, a reboot, an expired session, or a pop-up leaves a TV stuck until someone walks over. Four PowerShell scripts now handle auto-login, sign-in to the OEE app over the Chrome DevTools Protocol, scheduled refresh, and relaunching Edge when it hangs.</p>
+                <div class="d-flex flex-wrap gap-1 mb-3">
+                  <span class="badge tech">PowerShell</span><span class="badge tech">Edge kiosk mode</span><span class="badge tech">DevTools Protocol</span><span class="badge tech">DPAPI</span><span class="badge tech">Sysinternals Autologon</span>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary mono" type="button" data-bs-toggle="collapse" data-bs-target="#kioskCode" aria-expanded="false" aria-controls="kioskCode">show the watchdog loop</button>
+                <div class="collapse mt-3" id="kioskCode">
+<pre class="code mono mb-1"><code>while ($true) {
+  Start-Sleep 60
+  # STOP file = maintenance mode
+  if (Test-Path $StopFile) { exit 0 }
+  # Edge hung or closed: relaunch it
+  if (-not (Test-Browser)) {
+    Start-Display; continue
+  }
+  # app refresh first, page reload as fallback
+  if ($minutesSinceRefresh -ge $RefreshMinutes) {
+    Invoke-Refresh
+  }
+  # signed out or off the dashboard: fix it
+  if (Ensure-LoggedIn) { Ensure-Dashboard }
+}</code></pre>
+                  <p class="small text-secondary mono mb-0">Condensed from Start-OEEDisplay.ps1</p>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/production-dashboard-kiosks" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-success mono">Live</span>
+                  <span class="badge border text-secondary mono">built + maintain</span>
+                </div>
+                <h3 class="h5 card-title">Visitor sign-in kiosk</h3>
+                <p class="card-text">Front desk visitor sign-in and driver check-in. Microsoft Forms submissions run through Power Automate into SharePoint lists, and driver check-ins send an email notification.</p>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge tech">Power Automate</span><span class="badge tech">Microsoft Forms</span><span class="badge tech">SharePoint</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/visitor-sign-in-kiosk" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-success mono">Live</span>
+                  <span class="badge border text-secondary mono">built</span>
+                </div>
+                <h3 class="h5 card-title">NDA sync to SharePoint</h3>
+                <p class="card-text">Replaced paper visitor NDAs with an Acrobat Sign web form. A scheduled flow files every signed NDA in SharePoint and skips ones already there. I rebuilt it on a schedule after hitting limits in Acrobat Sign's trigger.</p>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge tech">Power Automate</span><span class="badge tech">Adobe Acrobat Sign</span><span class="badge tech">SharePoint</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/nda-sync" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-primary mono">Complete</span>
+                  <span class="badge border text-secondary mono">assisted, then owner</span>
+                </div>
+                <h3 class="h5 card-title">MSP to in-house migration</h3>
+                <p class="card-text">Moved EDR, MDR, email security, backup, RMM, and monitoring off a managed service provider. Includes a forced ScreenConnect removal script scoped by instance ID.</p>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge tech">PowerShell</span><span class="badge tech">MSI</span><span class="badge tech">ScreenConnect</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/msp-to-in-house-migration" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-info mono">Runbook</span>
+                  <span class="badge border text-secondary mono">built + wrote</span>
+                </div>
+                <h3 class="h5 card-title">QNAP RAID recovery on Linux</h3>
+                <p class="card-text">Pulls data off a QNAP NAS from an isolated Linux box without booting the NAS or writing to its drives. The drives are write-locked at the block layer, the RAID is assembled and mounted read-only, and the data is scanned before it's copied out.</p>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge tech">Linux</span><span class="badge tech">mdadm</span><span class="badge tech">LVM</span><span class="badge tech">ClamAV</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/qnap-raid-recovery" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card project h-100">
+              <div class="card-body">
+                <div class="d-flex gap-2 mb-3">
+                  <span class="badge text-bg-secondary mono">Evaluated</span>
+                  <span class="badge border text-secondary mono">owner</span>
+                </div>
+                <h3 class="h5 card-title">macOS pilot evaluation</h3>
+                <p class="card-text">Line-of-business app check, MDM selection against licensing the company already owned, and a three-device pilot plan for up to 10 Mac users.</p>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge tech">Scalefusion</span><span class="badge tech">macOS</span><span class="badge tech">Licensing</span>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <a class="link-accent mono small" href="https://github.com/JoeT06/it-ops-portfolio/tree/main/projects/macos-pilot-evaluation" target="_blank" rel="noopener">view on GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Ownership -->
+    <section id="ownership" class="section section-alt">
+      <div class="container">
+        <p class="mono text-accent mb-1">joe@torres:~$ ls -l ownership/</p>
+        <h2 class="mono fw-bold mb-4">Day-to-day ownership</h2>
+
+        <div class="accordion" id="ownershipAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-network" aria-expanded="true" aria-controls="own-network">network</button>
+            </h3>
+            <div id="own-network" class="accordion-collapse collapse show" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">UniFi controller, 5 switches, and 14 access points. First call when network gear goes down. The dual-WAN failover I set up with my manager held through an ISP fiber cut.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-erp" aria-expanded="false" aria-controls="own-erp">erp</button>
+            </h3>
+            <div id="own-erp" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Primary Business Central admin. Rebuilt user permissions around least privilege.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-m365" aria-expanded="false" aria-controls="own-m365">m365</button>
+            </h3>
+            <div id="own-m365" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Delegated Microsoft 365 and Entra ID admin across two tenants. Power Automate for business processes.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-endpoints" aria-expanded="false" aria-controls="own-endpoints">endpoints</button>
+            </h3>
+            <div id="own-endpoints" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Scalefusion for tablets and a lobby kiosk profile, SureMDM for warehouse scanners, FOG for PXE imaging.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-servers" aria-expanded="false" aria-controls="own-servers">servers</button>
+            </h3>
+            <div id="own-servers" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Windows and Linux VMs on Hyper-V.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-rooms" aria-expanded="false" aria-controls="own-rooms">meeting-rooms</button>
+            </h3>
+            <div id="own-rooms" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Configured the Microsoft Teams Rooms devices for a meeting room overhaul.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-labels" aria-expanded="false" aria-controls="own-labels">label-printing</button>
+            </h3>
+            <div id="own-labels" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Assisted the move from BarTender Cloud to on-prem and put the label printers on the network.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-secops" aria-expanded="false" aria-controls="own-secops">secops</button>
+            </h3>
+            <div id="own-secops" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Alert triage, EDR and email quarantine review, phishing simulation campaigns.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed mono" type="button" data-bs-toggle="collapse" data-bs-target="#own-support" aria-expanded="false" aria-controls="own-support">support</button>
+            </h3>
+            <div id="own-support" class="accordion-collapse collapse" data-bs-parent="#ownershipAccordion">
+              <div class="accordion-body">Tier II escalation point for the help desk.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="tools" class="section">
+      <div class="container">
+        <p class="mono text-accent mb-1">joe@torres:~$ cat tools.conf</p>
+        <h2 class="mono fw-bold mb-4">Tools</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[microsoft]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">Microsoft 365</span><span class="badge tech">Entra ID</span><span class="badge tech">SharePoint</span><span class="badge tech">Power Automate</span><span class="badge tech">Forms</span><span class="badge tech">Teams Rooms</span><span class="badge tech">Hyper-V</span><span class="badge tech">Windows Server</span></div>
+          </div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[security]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">EDR</span><span class="badge tech">MDR</span><span class="badge tech">Email security</span><span class="badge tech">Security awareness training</span><span class="badge tech">DNS filtering</span><span class="badge tech">Endpoint logging</span></div>
+          </div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[endpoint]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">RMM</span><span class="badge tech">Scalefusion</span><span class="badge tech">SureMDM</span><span class="badge tech">FOG</span></div>
+          </div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[network]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">UniFi</span><span class="badge tech">Firewalls</span><span class="badge tech">VPN</span></div>
+          </div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[business]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">Business Central</span><span class="badge tech">Aptean OEE</span><span class="badge tech">Adobe Acrobat Sign</span><span class="badge tech">BarTender</span></div>
+          </div></div></div>
+          <div class="col"><div class="card h-100"><div class="card-body">
+            <h3 class="h6 mono text-accent">[ops] + [languages]</h3>
+            <div class="d-flex flex-wrap gap-1"><span class="badge tech">PSA</span><span class="badge tech">Spiceworks</span><span class="badge tech">Backup and DR</span><span class="badge tech">PowerShell</span><span class="badge tech">Bash</span><span class="badge tech">sed / gawk</span></div>
+          </div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background" class="section section-alt">
+      <div class="container">
+        <p class="mono text-accent mb-1">joe@torres:~$ cat background.txt</p>
+        <h2 class="mono fw-bold mb-4">Background</h2>
+        <div class="row">
+          <div class="col-lg-8">
+            <ul class="list-group mono">
+              <li class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                <span><span class="text-accent">[x]</span> Red Hat Certified System Administrator (RHCSA)</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                <span><span class="text-accent">[x]</span> Associate's degree, Information Technology</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                <span><span class="text-warning">[ ]</span> B.S. Information Technology, University of North Texas</span>
+                <span class="badge text-bg-warning">in progress, expected 2028</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center gap-3">
+                <span><span class="text-accent">[x]</span> IT support, UNT College of Engineering</span>
+                <span class="badge border text-secondary">previous role</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="mono text-accent mb-1">joe@torres:~$ contact --list</p>
+        <h2 class="mono fw-bold mb-4">Contact</h2>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <a class="card contact-card h-100 text-decoration-none" href="https://www.linkedin.com/in/joeatorres/" target="_blank" rel="noopener">
+              <div class="card-body">
+                <div class="mono text-secondary small">linkedin</div>
+                <div class="mono fs-5">linkedin.com/in/joeatorres</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a class="card contact-card h-100 text-decoration-none" href="https://github.com/JoeT06" target="_blank" rel="noopener">
+              <div class="card-body">
+                <div class="mono text-secondary small">github</div>
+                <div class="mono fs-5">github.com/JoeT06</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-top py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 small text-secondary mono">
+      <span>© 2026 Joe Torres · Bootstrap 5.3 on AWS Amplify</span>
+      <span>Work details are generalized. No company names, people, addresses, or internal configuration.</span>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
